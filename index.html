@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmark</title>
+
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1 class="text-center my-5">Bookmarker</h1>
+      <hr />
+      <h2 class="hero-heading text-center my-4 fs-4">
+        <i class="fa-solid fa-bookmark" style="color: #3ca55c"></i>
+        Bookmark your favorite sites
+        <i class="fa-solid fa-bookmark" style="color: #b5ac49"></i>
+      </h2>
+      <section class="text-center my-5">
+        <div class="bookmark-name my-3">
+          <div class="bookmark-name-heading d-flex align-items-center">
+            <i class="fa-solid fa-book-bookmark"></i>
+            <p class="m-2 fw-bold">Site Name</p>
+          </div>
+          <div class="bookmark">
+            <div class="form-floating mb-3">
+              <input
+                oninput="validateForm(this)"
+                type="text"
+                class="form-control"
+                id="bookmarkName"
+                placeholder="name@example.com"
+              />
+              <label for="bookmarkName">Bookmark Name</label>
+            </div>
+          </div>
+        </div>
+        <div class="site-url my-3">
+          <div class="site-url-heading d-flex align-items-center">
+            <i class="fa-solid fa-link"></i>
+            <p class="m-2 fw-bold">Site URL</p>
+          </div>
+          <div class="site-input">
+            <div class="form-floating mb-3">
+              <input
+                oninput="validateForm(this)"
+                type="text"
+                class="form-control"
+                id="bookmarkSite"
+                placeholder="name@example.com"
+              />
+              <label for="bookmarkSite">Website URL</label>
+            </div>
+          </div>
+        </div>
+        <button
+          onclick="addBookmark()"
+          type="button"
+          class="btn btn-success my-3 px-5 py-2"
+        >
+          Submit
+        </button>
+
+        <hr />
+        <table class="table mt-4 text-center bg-light">
+          <thead>
+            <tr>
+              <th class="text-capitalize">index</th>
+              <th class="text-capitalize">Website Name</th>
+              <th class="text-capitalize">Visit</th>
+              <th class="text-capitalize">Delete</th>
+            </tr>
+          </thead>
+          <tbody id="cartoona"></tbody>
+        </table>
+      </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>

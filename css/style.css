@@ -1,0 +1,40 @@
+body {
+  background-color: #f7ecde;
+}
+
+/* ---------------- Globals ---------------- */
+
+h1 {
+  font-family: "Pacifico";
+  font-size: 3.75rem;
+  color: #352e28;
+  position: relative;
+}
+
+main h1::before {
+  content: "";
+  position: absolute;
+  width: 25%;
+  height: 25%;
+  left: 37.5%;
+  bottom: 0;
+  background-color: #fec260;
+  transition: height 350ms;
+  z-index: -1;
+}
+
+main h1:hover::before {
+  height: 50%;
+}
+
+hr {
+  border-top: dotted black;
+}
+
+.hero-heading {
+  font-family: "Righteous", cursive;
+  background: -webkit-linear-gradient(#3ca55c, #b5ac49);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
